@@ -1,10 +1,10 @@
 package com.ms.tweet.repository.projection;
 
-import com.gmail.merikbest2015.dto.response.tweet.TweetAuthorResponse;
-import com.gmail.merikbest2015.dto.response.tweet.TweetListResponse;
-import com.gmail.merikbest2015.dto.response.user.TaggedUserResponse;
-import com.gmail.merikbest2015.enums.LinkCoverSize;
-import com.gmail.merikbest2015.enums.ReplyType;
+import main.java.com.leon.baobui.dto.response.tweet.TweetAuthorResponse;
+import main.java.com.leon.baobui.dto.response.tweet.TweetListResponse;
+import main.java.com.leon.baobui.dto.response.user.TaggedUserResponse;
+import main.java.com.leon.baobui.enums.LinkCoverSize;
+import main.java.com.leon.baobui.enums.ReplyType;
 import org.springframework.beans.factory.annotation.Value;
 
 import java.time.LocalDateTime;

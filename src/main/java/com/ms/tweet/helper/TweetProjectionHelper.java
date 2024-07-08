@@ -1,11 +1,11 @@
 package com.ms.tweet.helper;
 
-import com.gmail.merikbest2015.dto.request.IdsRequest;
-import com.gmail.merikbest2015.dto.response.tweet.TweetAdditionalInfoUserResponse;
-import com.gmail.merikbest2015.dto.response.tweet.TweetAuthorResponse;
-import com.gmail.merikbest2015.dto.response.tweet.TweetListResponse;
-import com.gmail.merikbest2015.dto.response.user.TaggedUserResponse;
-import com.gmail.merikbest2015.util.AuthUtil;
+import main.java.com.leon.baobui.dto.request.IdsRequest;
+import main.java.com.leon.baobui.dto.response.tweet.TweetAdditionalInfoUserResponse;
+import main.java.com.leon.baobui.dto.response.tweet.TweetAuthorResponse;
+import main.java.com.leon.baobui.dto.response.tweet.TweetListResponse;
+import main.java.com.leon.baobui.dto.response.user.TaggedUserResponse;
+import main.java.com.leon.baobui.util.AuthUtil;
 import com.ms.tweet.client.ListsClient;
 import com.ms.tweet.client.UserClient;
 import com.ms.tweet.repository.BookmarkRepository;

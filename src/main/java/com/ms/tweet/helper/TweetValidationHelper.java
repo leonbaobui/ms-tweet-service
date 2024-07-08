@@ -1,8 +1,8 @@
 package com.ms.tweet.helper;
 
-import com.gmail.merikbest2015.dto.request.IdsRequest;
-import com.gmail.merikbest2015.exception.ApiRequestException;
-import com.gmail.merikbest2015.util.AuthUtil;
+import main.java.com.leon.baobui.dto.request.IdsRequest;
+import main.java.com.leon.baobui.exception.ApiRequestException;
+import main.java.com.leon.baobui.util.AuthUtil;
 import com.ms.tweet.client.UserClient;
 import com.ms.tweet.repository.TweetRepository;
 import jakarta.persistence.Id;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-import static com.gmail.merikbest2015.constants.ErrorMessage.*;
+import static main.java.com.leon.baobui.constants.ErrorMessage.*;
 
 @Component
 @RequiredArgsConstructor

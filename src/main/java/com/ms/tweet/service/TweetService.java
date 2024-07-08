@@ -1,11 +1,11 @@
 package com.ms.tweet.service;
 
-import com.gmail.merikbest2015.dto.HeaderResponse;
-import com.gmail.merikbest2015.dto.request.IdsRequest;
-import com.gmail.merikbest2015.dto.response.tweet.TweetResponse;
-import com.gmail.merikbest2015.exception.ApiRequestException;
-import com.gmail.merikbest2015.mapper.BasicMapper;
-import com.gmail.merikbest2015.util.AuthUtil;
+import main.java.com.leon.baobui.dto.HeaderResponse;
+import main.java.com.leon.baobui.dto.request.IdsRequest;
+import main.java.com.leon.baobui.dto.response.tweet.TweetResponse;
+import main.java.com.leon.baobui.exception.ApiRequestException;
+import main.java.com.leon.baobui.mapper.BasicMapper;
+import main.java.com.leon.baobui.util.AuthUtil;
 import com.ms.tweet.client.TagClient;
 import com.ms.tweet.client.UserClient;
 import com.ms.tweet.dto.request.TweetRequest;
@@ -29,7 +29,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import static com.gmail.merikbest2015.constants.ErrorMessage.TWEET_NOT_FOUND;
+import static main.java.com.leon.baobui.constants.ErrorMessage.TWEET_NOT_FOUND;
 
 @Service
 @RequiredArgsConstructor

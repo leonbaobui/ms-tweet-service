@@ -13,6 +13,9 @@ java {
 
 repositories {
 	mavenCentral()
+	maven {
+		url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+	}
 }
 
 dependencies {
@@ -47,8 +50,7 @@ dependencies {
 	implementation 'org.jsoup:jsoup:1.15.3'
 	implementation 'org.json:json:20231013'
 
-	implementation project(':lib')
-	annotationProcessor(project(":lib"))
+	implementation 'io.github.leonbaobui:common-lib:0.0.3-SNAPSHOT'
 
 	implementation 'org.flywaydb:flyway-core:10.6.0'
 	implementation 'org.flywaydb:flyway-database-postgresql:10.6.0'

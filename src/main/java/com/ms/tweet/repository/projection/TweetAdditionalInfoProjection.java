@@ -1,7 +1,7 @@
 package com.ms.tweet.repository.projection;
 
-import com.gmail.merikbest2015.dto.response.tweet.TweetAdditionalInfoUserResponse;
-import com.gmail.merikbest2015.enums.ReplyType;
+import main.java.com.leon.baobui.dto.response.tweet.TweetAdditionalInfoUserResponse;
+import main.java.com.leon.baobui.enums.ReplyType;
 import org.springframework.beans.factory.annotation.Value;
 
 public interface TweetAdditionalInfoProjection {

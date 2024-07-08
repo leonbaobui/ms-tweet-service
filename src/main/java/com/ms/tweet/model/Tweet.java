@@ -1,7 +1,7 @@
 package com.ms.tweet.model;
 
-import com.gmail.merikbest2015.enums.LinkCoverSize;
-import com.gmail.merikbest2015.enums.ReplyType;
+import main.java.com.leon.baobui.enums.LinkCoverSize;
+import main.java.com.leon.baobui.enums.ReplyType;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

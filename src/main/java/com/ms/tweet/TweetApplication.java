@@ -1,8 +1,8 @@
 package com.ms.tweet;
 
-import com.gmail.merikbest2015.configuration.SharedConfiguration;
-import com.gmail.merikbest2015.mapper.BasicMapper;
-import com.gmail.merikbest2015.security.JwtProvider;
+import main.java.com.leon.baobui.configuration.SharedConfiguration;
+import main.java.com.leon.baobui.mapper.BasicMapper;
+import main.java.com.leon.baobui.security.JwtProvider;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +11,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication(scanBasePackages = {"com.ms.tweet", "com.gmail.merikbest2015"} )
+@SpringBootApplication(scanBasePackages = {"com.ms.tweet", "main.java.com.leon.baobui"} )
 @EnableAutoConfiguration
 @EnableDiscoveryClient
 @EnableFeignClients

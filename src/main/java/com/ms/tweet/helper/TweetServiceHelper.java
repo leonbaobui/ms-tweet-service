@@ -1,11 +1,11 @@
 package com.ms.tweet.helper;
 
-import com.gmail.merikbest2015.dto.request.NotificationRequest;
-import com.gmail.merikbest2015.dto.response.tweet.TweetResponse;
-import com.gmail.merikbest2015.enums.LinkCoverSize;
-import com.gmail.merikbest2015.enums.NotificationType;
-import com.gmail.merikbest2015.mapper.BasicMapper;
-import com.gmail.merikbest2015.util.AuthUtil;
+import main.java.com.leon.baobui.dto.request.NotificationRequest;
+import main.java.com.leon.baobui.dto.response.tweet.TweetResponse;
+import main.java.com.leon.baobui.enums.LinkCoverSize;
+import main.java.com.leon.baobui.enums.NotificationType;
+import main.java.com.leon.baobui.mapper.BasicMapper;
+import main.java.com.leon.baobui.util.AuthUtil;
 import com.ms.tweet.client.NotificationClient;
 import com.ms.tweet.client.UserClient;
 import com.ms.tweet.client.YoutubeClient;

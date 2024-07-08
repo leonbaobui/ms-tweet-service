@@ -1,7 +1,7 @@
 package com.ms.tweet.service;
 
-import com.gmail.merikbest2015.dto.response.chat.ChatTweetResponse;
-import com.gmail.merikbest2015.mapper.BasicMapper;
+import main.java.com.leon.baobui.dto.response.chat.ChatTweetResponse;
+import main.java.com.leon.baobui.mapper.BasicMapper;
 import com.ms.tweet.repository.TweetRepository;
 import com.ms.tweet.repository.projection.ChatTweetProjection;
 import lombok.RequiredArgsConstructor;

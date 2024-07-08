@@ -1,7 +1,7 @@
 package com.ms.tweet.controller.rest;
 
-import com.gmail.merikbest2015.dto.HeaderResponse;
-import com.gmail.merikbest2015.dto.response.tweet.TweetResponse;
+import main.java.com.leon.baobui.dto.HeaderResponse;
+import main.java.com.leon.baobui.dto.response.tweet.TweetResponse;
 import com.ms.tweet.client.WebSocketClient;
 import com.ms.tweet.dto.request.TweetRequest;
 import com.ms.tweet.dto.response.ProfileTweetImageResponse;
@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.*;
 import java.net.http.WebSocket;
 import java.util.List;
 
-import static com.gmail.merikbest2015.constants.PathConstants.*;
-import static com.gmail.merikbest2015.constants.WebsocketConstants.TOPIC_FEED_ADD;
-import static com.gmail.merikbest2015.constants.WebsocketConstants.TOPIC_USER_ADD_TWEET;
+import static main.java.com.leon.baobui.constants.PathConstants.*;
+import static main.java.com.leon.baobui.constants.WebsocketConstants.TOPIC_FEED_ADD;
+import static main.java.com.leon.baobui.constants.WebsocketConstants.TOPIC_USER_ADD_TWEET;
 
 @RestController
 @RequiredArgsConstructor

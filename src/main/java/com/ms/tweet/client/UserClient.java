@@ -1,10 +1,10 @@
 package com.ms.tweet.client;
 
-import com.gmail.merikbest2015.configuration.FeignConfiguration;
-import com.gmail.merikbest2015.dto.request.IdsRequest;
-import com.gmail.merikbest2015.dto.response.tweet.TweetAdditionalInfoUserResponse;
-import com.gmail.merikbest2015.dto.response.tweet.TweetAuthorResponse;
-import com.gmail.merikbest2015.dto.response.user.TaggedUserResponse;
+import main.java.com.leon.baobui.configuration.FeignConfiguration;
+import main.java.com.leon.baobui.dto.request.IdsRequest;
+import main.java.com.leon.baobui.dto.response.tweet.TweetAdditionalInfoUserResponse;
+import main.java.com.leon.baobui.dto.response.tweet.TweetAuthorResponse;
+import main.java.com.leon.baobui.dto.response.user.TaggedUserResponse;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.cloud.openfeign.FeignClient;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static com.gmail.merikbest2015.constants.FeignConstants.USER_SERVICE;
-import static com.gmail.merikbest2015.constants.PathConstants.*;
+import static main.java.com.leon.baobui.constants.FeignConstants.USER_SERVICE;
+import static main.java.com.leon.baobui.constants.PathConstants.*;
 
 @FeignClient(name = USER_SERVICE, url = "${service.downstream-url.ms-user-service}", path ="/" + USER_SERVICE + API_V1_USER, contextId = "UserClient", configuration = FeignConfiguration.class)
 public interface UserClient {
