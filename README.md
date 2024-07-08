@@ -1,0 +1,1 @@
+ms-tweet-service: A microservice responsible for managing tweets.
