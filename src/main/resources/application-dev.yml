@@ -41,7 +41,7 @@ service:
   downstream-url:
     ms-tag-service: https://ms-tag-service.onrender.com
     ms-lists-service: https://ms-lists-service.onrender.com
-    ms-user-service: https://ms-user-service.onrender.com
+    ms-user-service: https://ms-user-service-ndm5.onrender.com
     ms-notification-service: https://ms-notification-service.onrender.com
     ms-websocket-service: https://ms-websocket-service.onrender.com
 
@@ -52,7 +52,7 @@ google:
 
 eureka:
   instance:
-    hostname: ms-tweet-service.onrender.com  # Public domain name
+    hostname: ms-tweet-service-o6ph.onrender.com  # Public domain name
     nonSecurePort: 443  # Standard HTTP port
     securePortEnabled: true  # Enable if you're using HTTPS
     preferIpAddress: false  # Use the hostname instead of the IP address
@@ -60,6 +60,6 @@ eureka:
     healthCheckUrlPath: /actuator/health  # Default health check path
   client:
     serviceUrl:
-      defaultZone: https://ms-eureka-server-syh2.onrender.com/eureka
+      defaultZone: https://ms-eureka-server-2cvn.onrender.com/eureka
     fetch-registry: true
     register-with-eureka: true
