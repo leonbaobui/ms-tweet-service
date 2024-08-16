@@ -50,7 +50,7 @@ dependencies {
 	implementation 'org.jsoup:jsoup:1.15.3'
 	implementation 'org.json:json:20231013'
 
-	implementation 'io.github.leonbaobui:common-lib:0.0.3-SNAPSHOT'
+	implementation 'io.github.leonbaobui:common-lib:0.0.6-SNAPSHOT'
 
 	implementation 'org.flywaydb:flyway-core:10.6.0'
 	implementation 'org.flywaydb:flyway-database-postgresql:10.6.0'
