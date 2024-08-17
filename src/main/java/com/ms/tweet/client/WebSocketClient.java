@@ -11,7 +11,7 @@ import static main.java.com.leon.baobui.constants.FeignConstants.WEBSOCKET_SERVI
 import static main.java.com.leon.baobui.constants.PathConstants.API_V1_WEBSOCKET;
 
 @CircuitBreaker(name = WEBSOCKET_SERVICE)
-@FeignClient(name = WEBSOCKET_SERVICE, url = "${service.downstream-url.ms-user-service}", configuration = FeignConfiguration.class)
+@FeignClient(name = WEBSOCKET_SERVICE, url = "${service.downstream-url.ms-websocket-service}", configuration = FeignConfiguration.class)
 public interface WebSocketClient {
     @PostMapping("/" + WEBSOCKET_SERVICE + API_V1_WEBSOCKET)
     void send(@RequestParam("destination") String destination, @RequestBody Object request);
