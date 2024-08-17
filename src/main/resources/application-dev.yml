@@ -43,7 +43,7 @@ service:
     ms-lists-service: https://ms-lists-service.onrender.com
     ms-user-service: https://ms-user-service-ndm5.onrender.com
     ms-notification-service: https://ms-notification-service.onrender.com
-    ms-websocket-service: https://ms-websocket-service.onrender.com
+    ms-websocket-service: https://ms-websocket-service-vy0m.onrender.com
 
 google:
   api:
