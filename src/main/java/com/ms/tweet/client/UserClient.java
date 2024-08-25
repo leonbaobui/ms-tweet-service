@@ -8,12 +8,30 @@ import main.java.com.leon.baobui.dto.response.user.TaggedUserResponse;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.cloud.openfeign.FeignClient;
 
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static main.java.com.leon.baobui.constants.FeignConstants.USER_SERVICE;
-import static main.java.com.leon.baobui.constants.PathConstants.*;
+import static main.java.com.leon.baobui.constants.PathConstants.API_V1_USER;
+import static main.java.com.leon.baobui.constants.PathConstants.IS_EXISTS_USER_ID;
+import static main.java.com.leon.baobui.constants.PathConstants.IS_FOLLOWED_USER_ID;
+import static main.java.com.leon.baobui.constants.PathConstants.IS_MY_PROFILE_BLOCKED_USER_ID;
+import static main.java.com.leon.baobui.constants.PathConstants.IS_PRIVATE_USER_ID;
+import static main.java.com.leon.baobui.constants.PathConstants.MEDIA_COUNT;
+import static main.java.com.leon.baobui.constants.PathConstants.TAGGED_IMAGE;
+import static main.java.com.leon.baobui.constants.PathConstants.TWEET_ADDITIONAL_INFO_USER_ID;
+import static main.java.com.leon.baobui.constants.PathConstants.TWEET_AUTHOR_USER_ID;
+import static main.java.com.leon.baobui.constants.PathConstants.TWEET_COUNT;
+import static main.java.com.leon.baobui.constants.PathConstants.TWEET_PINNED_TWEET_ID;
+import static main.java.com.leon.baobui.constants.PathConstants.TWEET_PINNED_USER_ID;
+import static main.java.com.leon.baobui.constants.PathConstants.USER_ID_USERNAME;
+import static main.java.com.leon.baobui.constants.PathConstants.VALID_IDS;
 
 @FeignClient(name = USER_SERVICE, url = "${service.downstream-url.ms-user-service}", path ="/" + USER_SERVICE + API_V1_USER, contextId = "UserClient", configuration = FeignConfiguration.class)
 public interface UserClient {
@@ -71,5 +89,12 @@ public interface UserClient {
 
     default Long defaultEmptyPinnedTweetId(Throwable throwable) {
         return 0L;
+    }
+    default List<Long> defaultEmptyIdsList(Throwable throwable) {
+        return new ArrayList<>();
+    }
+
+    default ArrayList<TaggedUserResponse> defaultEmptyUsersList(Throwable throwable) {
+        return new ArrayList<>();
     }
 }
