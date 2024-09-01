@@ -13,7 +13,7 @@ import static main.java.com.leon.baobui.constants.FeignConstants.NOTIFICATION_SE
 import static main.java.com.leon.baobui.constants.FeignConstants.USER_SERVICE;
 import static main.java.com.leon.baobui.constants.PathConstants.*;
 
-@FeignClient(name = NOTIFICATION_SERVICE, url = "${service.downstream-url.ms-notification-service}", path ="/" + NOTIFICATION_SERVICE + API_V1_USER, contextId = "NotificationClient", configuration = FeignConfiguration.class)
+@FeignClient(name = NOTIFICATION_SERVICE, url = "${service.downstream-url.ms-notification-service}", path ="/" + NOTIFICATION_SERVICE + API_V1_NOTIFICATION, contextId = "NotificationClient", configuration = FeignConfiguration.class)
 public interface NotificationClient {
     @PostMapping(TWEET)
     NotificationResponse sendTweetNotification(@RequestBody NotificationRequest request);

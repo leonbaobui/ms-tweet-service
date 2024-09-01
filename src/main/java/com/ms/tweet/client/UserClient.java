@@ -23,6 +23,7 @@ import static main.java.com.leon.baobui.constants.PathConstants.IS_EXISTS_USER_I
 import static main.java.com.leon.baobui.constants.PathConstants.IS_FOLLOWED_USER_ID;
 import static main.java.com.leon.baobui.constants.PathConstants.IS_MY_PROFILE_BLOCKED_USER_ID;
 import static main.java.com.leon.baobui.constants.PathConstants.IS_PRIVATE_USER_ID;
+import static main.java.com.leon.baobui.constants.PathConstants.LIKE_COUNT;
 import static main.java.com.leon.baobui.constants.PathConstants.MEDIA_COUNT;
 import static main.java.com.leon.baobui.constants.PathConstants.TAGGED_IMAGE;
 import static main.java.com.leon.baobui.constants.PathConstants.TWEET_ADDITIONAL_INFO_USER_ID;
@@ -70,6 +71,10 @@ public interface UserClient {
     @CircuitBreaker(name = USER_SERVICE)
     @PutMapping(TWEET_COUNT)
     void updateTweetCount(@PathVariable("increaseCount") boolean increaseCount);
+
+    @CircuitBreaker(name = USER_SERVICE)
+    @PutMapping(LIKE_COUNT)
+    void updateLikeCount(@PathVariable("increaseCount") boolean increaseCount);
 
     @CircuitBreaker(name = USER_SERVICE)
     @GetMapping(USER_ID_USERNAME)

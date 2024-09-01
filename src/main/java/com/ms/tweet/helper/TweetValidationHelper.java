@@ -4,8 +4,8 @@ import main.java.com.leon.baobui.dto.request.IdsRequest;
 import main.java.com.leon.baobui.exception.ApiRequestException;
 import main.java.com.leon.baobui.util.AuthUtil;
 import com.ms.tweet.client.UserClient;
+import com.ms.tweet.model.Tweet;
 import com.ms.tweet.repository.TweetRepository;
-import jakarta.persistence.Id;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -22,6 +22,12 @@ public class TweetValidationHelper {
     public List<Long> getValidUserIds() {
         List<Long> tweetAuthorIds = tweetRepository.getTweetAuthorIds();
         return userClient.getValidUserIds(new IdsRequest(tweetAuthorIds));
+    }
+    public Tweet checkValidTweet(Long tweetId) {
+        Tweet tweet = tweetRepository.findById(tweetId)
+                .orElseThrow(() -> new ApiRequestException(TWEET_NOT_FOUND, HttpStatus.NOT_FOUND));
+        validateTweet(tweet.isDeleted(), tweet.getAuthorId());
+        return tweet;
     }
     public void validateTweet(boolean isDeleted, Long tweetAuthorId) {
         if (isDeleted) {

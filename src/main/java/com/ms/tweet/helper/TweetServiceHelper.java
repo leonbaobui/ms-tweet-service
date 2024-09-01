@@ -1,6 +1,7 @@
 package com.ms.tweet.helper;
 
 import main.java.com.leon.baobui.dto.request.NotificationRequest;
+import main.java.com.leon.baobui.dto.response.notification.NotificationResponse;
 import main.java.com.leon.baobui.dto.response.tweet.TweetResponse;
 import main.java.com.leon.baobui.enums.LinkCoverSize;
 import main.java.com.leon.baobui.enums.NotificationType;
@@ -222,5 +223,18 @@ public class TweetServiceHelper {
         }
 
         return allTweets;
+    }
+
+//    TODO: code smell, refactor using design pattern
+    public NotificationResponse sendNotification(NotificationType notificationType, boolean notificationCondition,
+                                                 Long notifiedUserId, Long userId, Long tweetId) {
+        NotificationRequest request = NotificationRequest.builder()
+                .notificationType(notificationType)
+                .notificationCondition(notificationCondition)
+                .notifiedUserId(notifiedUserId)
+                .userId(userId)
+                .tweetId(tweetId)
+                .build();
+        return notificationClient.sendTweetNotification(request);
     }
 }
