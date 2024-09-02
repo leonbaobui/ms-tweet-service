@@ -24,7 +24,7 @@ public class LikeTweetController {
     @GetMapping(LIKE_USER_ID_TWEET_ID)
     public ResponseEntity<NotificationTweetResponse> likeTweet(@PathVariable("userId") Long userId,
                                                                @PathVariable("tweetId") Long tweetId) {
-        NotificationResponse notificationResponse = likeTweetService.likeTweet(userId, tweetId);
+        NotificationResponse notificationResponse = likeTweetService.likeTweet(tweetId);
         return ResponseEntity.ok(notificationResponse.getTweet());
     }
 }
