@@ -33,8 +33,8 @@ spring:
   datasource:
     platform: postgres
     url: jdbc:postgresql://dpg-coh7s5f79t8c73fuij7g-a.oregon-postgres.render.com/ms_tweet_service
-    username: twitter_fnvb_user
-    password: bWuOk2kJRpU0EtjUAPRoMhx3UU2ZF7uh
+    username:
+    password:
     driverClassName: org.postgresql.Driver
 
 service:
@@ -52,7 +52,7 @@ google:
 
 eureka:
   instance:
-    hostname: ms-tweet-service-o6ph.onrender.com  # Public domain name
+    hostname: ms-tweet-service-vj9h.onrender.com  # Public domain name
     nonSecurePort: 443  # Standard HTTP port
     securePortEnabled: true  # Enable if you're using HTTPS
     preferIpAddress: false  # Use the hostname instead of the IP address
