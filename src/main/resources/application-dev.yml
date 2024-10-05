@@ -32,7 +32,7 @@ spring:
   #      ddl-auto: create-drop
   datasource:
     platform: postgres
-    url: jdbc:postgresql://dpg-coh7s5f79t8c73fuij7g-a.oregon-postgres.render.com/ms_tweet_service
+    url: jdbc:postgresql://ep-cold-mud-a1zdq33b-pooler.ap-southeast-1.aws.neon.tech/ms_tweet_service?sslmode=require
     username: ${POSTGRESQL_USERNAME}
     password: ${POSTGRESQL_PASSWORD}
     driverClassName: org.postgresql.Driver
