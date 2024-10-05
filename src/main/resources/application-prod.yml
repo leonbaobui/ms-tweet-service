@@ -33,8 +33,8 @@ spring:
   datasource:
     platform: postgres
     url: jdbc:postgresql://twitter-db-tranbaotin270402-c9d4.i.aivencloud.com:27368/ms_tweet_service?sslmode=require
-    username:
-    password:
+    username: ${POSTGRESQL_USERNAME}
+    password: ${POSTGRESQL_PASSWORD}
     driverClassName: org.postgresql.Driver
 
 service:
@@ -48,7 +48,7 @@ service:
 google:
   api:
     url: https://www.googleapis.com/youtube/v3/videos?id=%s&key=%s&part=snippet,contentDetails,statistics,status
-    key:
+    key: ${GOOGLE_API_KEY}
 
 eureka:
   instance:

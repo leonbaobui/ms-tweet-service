@@ -18,8 +18,8 @@ spring:
   datasource:
     platform: postgres
     url: jdbc:postgresql://localhost:5432/ms_tweet_service
-    username: postgres
-    password: root
+    username: ${POSTGRESQL_USERNAME}
+    password: ${POSTGRESQL_PASSWORD}
     driverClassName: org.postgresql.Driver
 
 infrastructure:
@@ -31,7 +31,7 @@ infrastructure:
 google:
   api:
     url: https://www.googleapis.com/youtube/v3/videos?id=%s&key=%s&part=snippet,contentDetails,statistics,status
-    key: AIzaSyAzjkMGVmYbeNnfkHFaViidfftvFot31lE
+    key: ${GOOGLE_API_KEY}
 
 eureka:
   client:
