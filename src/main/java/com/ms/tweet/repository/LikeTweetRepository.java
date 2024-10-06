@@ -14,6 +14,12 @@ public interface LikeTweetRepository extends JpaRepository<LikeTweet, Long> {
             "WHERE likeTweet.userId = :userId AND likeTweet.tweetId = :tweetId")
     boolean isUserLikedTweet(@Param("userId") Long userId, @Param("tweetId") Long tweetId);
 
-    @Query("SELECT count(likeTweet) FROM LikeTweet likeTweet WHERE likeTweet.id = :tweetId")
+    @Query("SELECT count(likeTweet) FROM LikeTweet likeTweet WHERE likeTweet.tweetId = :tweetId")
     Long getLikedTweetsSize(@Param("tweetId") Long tweetId);
+
+    @Query("SELECT likeTweet " +
+            "FROM LikeTweet likeTweet " +
+            "WHERE likeTweet.tweetId = :tweetId AND likeTweet.userId = :userId")
+    LikeTweet getLikedTweet(@Param("tweetId") Long tweetId,
+                  @Param("userId") Long userId);
 }

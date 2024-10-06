@@ -32,9 +32,9 @@ spring:
   #      ddl-auto: create-drop
   datasource:
     platform: postgres
-    url: jdbc:postgresql://dpg-coh7s5f79t8c73fuij7g-a.oregon-postgres.render.com/ms_tweet_service
-    username: twitter_fnvb_user
-    password: bWuOk2kJRpU0EtjUAPRoMhx3UU2ZF7uh
+    url: jdbc:postgresql://ep-cold-mud-a1zdq33b-pooler.ap-southeast-1.aws.neon.tech/ms_tweet_service?sslmode=require
+    username: ${POSTGRESQL_USERNAME}
+    password: ${POSTGRESQL_PASSWORD}
     driverClassName: org.postgresql.Driver
 
 service:
@@ -48,11 +48,11 @@ service:
 google:
   api:
     url: https://www.googleapis.com/youtube/v3/videos?id=%s&key=%s&part=snippet,contentDetails,statistics,status
-    key: AIzaSyAzjkMGVmYbeNnfkHFaViidfftvFot31lE
+    key: ${GOOGLE_API_KEY}
 
 eureka:
   instance:
-    hostname: ms-tweet-service-o6ph.onrender.com  # Public domain name
+    hostname: ms-tweet-service-vj9h.onrender.com  # Public domain name
     nonSecurePort: 443  # Standard HTTP port
     securePortEnabled: true  # Enable if you're using HTTPS
     preferIpAddress: false  # Use the hostname instead of the IP address

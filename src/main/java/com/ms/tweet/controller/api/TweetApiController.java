@@ -1,6 +1,8 @@
 package com.ms.tweet.controller.api;
 
 import main.java.com.leon.baobui.dto.response.chat.ChatTweetResponse;
+import main.java.com.leon.baobui.dto.response.notification.NotificationTweetResponse;
+
 import com.ms.tweet.service.TweetApiService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,5 +21,10 @@ public class TweetApiController {
     @GetMapping(CHAT_TWEET_ID)
     public ChatTweetResponse getChatTweet(@PathVariable("tweetId") Long tweetId) {
         return tweetApiService.getChatTweet(tweetId);
+    }
+
+    @GetMapping(NOTIFICATION_TWEET_ID)
+    public NotificationTweetResponse getNotificationTweet(@PathVariable("tweetId") Long tweetId) {
+        return tweetApiService.getNotificationTweet(tweetId);
     }
 }
