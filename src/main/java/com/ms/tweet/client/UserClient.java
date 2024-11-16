@@ -34,7 +34,7 @@ import static main.java.com.leon.baobui.constants.PathConstants.TWEET_PINNED_USE
 import static main.java.com.leon.baobui.constants.PathConstants.USER_ID_USERNAME;
 import static main.java.com.leon.baobui.constants.PathConstants.VALID_IDS;
 
-@FeignClient(name = USER_SERVICE, url = "${service.downstream-url.ms-user-service}", path ="/" + USER_SERVICE + API_V1_USER, contextId = "UserClient", configuration = FeignConfiguration.class)
+@FeignClient(name = USER_SERVICE, url = "${service.gateway-url}", path = API_V1_USER, contextId = "UserClient", configuration = FeignConfiguration.class)
 public interface UserClient {
     @CircuitBreaker(name = USER_SERVICE)
     @GetMapping(TWEET_AUTHOR_USER_ID)
