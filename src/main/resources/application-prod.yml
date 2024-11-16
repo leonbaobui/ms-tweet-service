@@ -40,7 +40,7 @@ spring:
 service:
   gateway-url: https://ms-api-gateway-cjh1.onrender.com
   downstream-url:
-    ms-websocket-service: https://ms-websocket-service-k09k.onrender.com
+    ms-websocket-service: https://ms-websocket-service-s97s.onrender.com
 
 google:
   api:
