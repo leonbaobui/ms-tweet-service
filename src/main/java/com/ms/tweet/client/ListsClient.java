@@ -11,7 +11,7 @@ import static main.java.com.leon.baobui.constants.FeignConstants.LISTS_SERVICE;
 import static main.java.com.leon.baobui.constants.PathConstants.API_V1_LISTS;
 import static main.java.com.leon.baobui.constants.PathConstants.TWEET_LIST_ID;
 
-@FeignClient(value = LISTS_SERVICE, url = "${service.downstream-url.ms-lists-service}", path = "/" + LISTS_SERVICE + API_V1_LISTS, configuration = FeignConfiguration.class)
+@FeignClient(value = LISTS_SERVICE, url = "${service.gateway-url}", path = API_V1_LISTS, configuration = FeignConfiguration.class)
 public interface ListsClient {
     @CircuitBreaker(name = LISTS_SERVICE, fallbackMethod = "defaultEmptyTweetList")
     @GetMapping(TWEET_LIST_ID)
