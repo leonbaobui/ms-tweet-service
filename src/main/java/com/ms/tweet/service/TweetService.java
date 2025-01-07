@@ -44,7 +44,6 @@ public class TweetService {
     @Transactional(readOnly = true)
     public HeaderResponse<TweetUserResponse> getUserTweets(Long userId, Pageable pageable) {
         tweetValidationHelper.validateUserProfile(userId);
-        // TODO: check N + 1 query here for images field
         List<TweetUserProjection> tweets = tweetRepository.getTweetsByUserId(userId);
         List<RetweetProjection> retweets = retweetRepository.getRetweetsByUserId(userId);
         List<TweetUserProjection> userTweets = tweetServiceHelper.combineTweetsArraysOnDateOrderDsc(tweets, retweets);
@@ -95,7 +94,6 @@ public class TweetService {
                 .orElseThrow(() -> new ApiRequestException(TWEET_NOT_FOUND, HttpStatus.BAD_REQUEST));
         userClient.updatePinnedTweetId(tweetId);
 //        tagClient.deleteTagsByTweetId(tweetId);
-        // soft delete
         tweet.setDeleted(true);
         return "Your Tweet has been deleted successfully";
     }
